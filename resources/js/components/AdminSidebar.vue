@@ -4,10 +4,10 @@ import NavFooter from '@/components/NavFooter.vue';
 import NavMain from '@/components/NavMain.vue';
 import NavUser from '@/components/NavUser.vue';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
-import { dashboard } from '@/routes';
+import { dashboard } from '@/routes/admin';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/vue3';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-vue-next';
+import { Book, BookOpen, Folder, LayoutGrid, Users } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
 
 const mainNavItems: NavItem[] = [
@@ -17,8 +17,15 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-
-    }
+        title : 'Pengguna',
+        href : '/#',
+        icon : Users,
+    },
+    {
+        title: 'Kursus',
+        href: '/#',
+        icon: Book,
+    },
 ];
 
 const footerNavItems: NavItem[] = [

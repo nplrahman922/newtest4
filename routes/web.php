@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Users\PenggunaController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -17,9 +18,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // URL: domain-anda.com/admin/dashboard
     // Nama Route: admin.dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // Anda bisa menambahkan route admin lainnya di sini
-    // Contoh: Route::get('/users', ...)->name('users.index');
+    Route::get('/users', [PenggunaController::class, 'pengguna'])->name('users');
 
 });
 
